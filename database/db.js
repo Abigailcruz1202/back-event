@@ -18,6 +18,6 @@ const {
 
 const sequelize = new Sequelize(`postgres://zhdfxnao:cXuuyfoyKt9vxEUWiZ4NzEKZIhA2WvRZ@kesavan.db.elephantsql.com/zhdfxnao`, {
     // Hace que no muestre todos los mensajes de conexion con SQL en la consola cuando inicias el servidor.
-    logging: false
+    logging: false,
 })
 module.exports = sequelize;
