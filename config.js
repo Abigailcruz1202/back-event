@@ -8,7 +8,7 @@ module.exports = {
     database:{
         username: `${DB_USER}`,
         password:  `${DB_PASSWORD}`,
-        database: 'event',//nombre de la base de datos
+        database: 'event-pf',//nombre de la base de datos
         host: `${DB_HOST}`
     }
 } 
