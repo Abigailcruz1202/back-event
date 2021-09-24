@@ -1,7 +1,10 @@
 const { Sequelize } = require('sequelize');
 const { database } = require('../config');
+require('dotenv').config();
 
-
+const {
+    DB_USER, DB_PASSWORD, DB_HOST,
+  } = process.env;
 
 // Option 2: Passing parameters separately (other dialects)
 // const sequelize = new Sequelize(
@@ -13,7 +16,7 @@ const { database } = require('../config');
 //     }
 // );
 
-const sequelize = new Sequelize('postgres://hoyicmlg:8QFr5bF5Kt3fmPkDbJDpXpmkH5n46KVd@motty.db.elephantsql.com/hoyicmlg', {
+const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}`, {
     // Hace que no muestre todos los mensajes de conexion con SQL en la consola cuando inicias el servidor.
     logging: false
 })
